@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
     // 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'.match(/\(([^\)]+)\)/)
 //     console.log(req.headers['user-agent'].match(/\(([^\)]+)\)/)[1]);
     var output = {
-        ipaddress: req.headers['x-forwarded-for'],
+        ipaddress: req.headers['x-forwarded-for'].split(',')[0],
         language: req.headers['accept-language'].split(',')[0],
         software: req.headers['user-agent'].match(/\(([^\)]+)\)/)[1]
     }
