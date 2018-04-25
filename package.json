@@ -4,6 +4,7 @@
   "description": "A request header parser JSON microservice made for the Free Code Camp challenge",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
